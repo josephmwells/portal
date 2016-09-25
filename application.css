@@ -7,9 +7,9 @@
   letter-spacing: .15em;
 }
 
-html {
-  background-image: radial_gradient (
-    #0000ff,
-    000009
+body {
+  background-image:
+    linear-gradient(
+      #0000ff, #000009
     );
 }
