@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  letter-spacing: .15em;
+}
+
+html{
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  background-image:
+    linear-gradient(
+      #0000ff, #000009
+    );
+}
+
+ul {
+  list-style: none;
+}
+
+a:link{
+  color: white;
+}
+
+a:visited{
+  color: blue;
+}
+
+.windows-box {
+  display: inline-block;
+  width: 250px;
+  margin-left: 5%;
+  margin-top: 10%;
+  /*margin-top: 10%;*/
+  height: 400px;
+
+  -moz-box-shadow:    0 0 10px 3px #393636;
+  -webkit-box-shadow: 0 0 10px 3px #393636;
+  box-shadow:         0 0 10px 3px #393636;
+
+  /*outline: 3px dashed red;*/
+}
+
+.global-nav{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-start;
+  margin: auto;
+
+}
+
+.global-nav a:hover{
+  color: white;
+  background-color: deeppink;
+}
+
+.global-nav li{
+  display: inline-block;
+
+}
+
+.global-nav a{
+  display: block;
+  position: relative;
+  text-overflow: visible;
+  text-transform: uppercase;
+
+
+  width: 90%;
+  margin-left: 8%;
+  margin-right: 5%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  line-height: 20px;
+  padding-left: 10px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+
+  color: blue;
+  background-color: white;
+
+  -moz-box-shadow:    inset 0 0 3px #000009;
+  -webkit-box-shadow: inset 0 0 3px #000009;
+  box-shadow:         inset 0 0 3px #000009;
+
+}
+
+.global-nav a:before{
+  position: absolute;
+  content: "\27A2";
+  color: blue;
+
+  left: -17px;
+}
+
+.windows-box {
+  background-color: #aeaeae;
+}
+
+/*------------------------------------*/
+
+/*cloud room*/
+
+.viewport{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display:block;
+  z-index: -1;
+
+  top: 0;
+
+  outline: 2px solid red;
+}
