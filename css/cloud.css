@@ -60,20 +60,27 @@ nav a:hover{
 
   outline: 2px solid red;
 }
-.cloud-pool{
+
+.pool-side, .cloud-pool{
   display: block;
   width: 500px;
   height: 300px;
   margin: auto;
+}
 
-  outline: 10px double #ffffff;
-  outline-offset: 5px;
+.pool-side{
+  //position: absolute;
+  outline: 30px ridge #cd4a00;
+  outline-offset: 0px;
 
+  mix-blend-mode: color-dodge;
+}
+
+.cloud-pool{
   background-image: url(../images/cloud-tile-00-anim.gif);
   background-size: 200px;
 
   -moz-box-shadow:    inset 0 0 3px #000009;
   -webkit-box-shadow: inset 0 0 3px #000009;
   box-shadow:         inset -1px -1px 10px 2px #000009;
-
 }
