@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./css/application.css" type="text/css" />
     <meta content='width=device-width, initial-scale=1' name='viewport'>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/interact.js/1.2.6/interact.min.js"></script>
-    <script src="./js/scripts.js"></script>
+    <script src="js/scripts.js" type="text/javascript"></script>
 
     <title>a portal to another world</title>
   </head>
@@ -16,8 +16,8 @@
     <header>
     </header>
 
-    <div class = 'windows-box'>
-      <ul class = 'global-nav draggable'>
+    <div class = 'nav-container'>
+      <ul class = 'global-nav resizable'>
         <li><a href="./html/cloud.html">cloud..room</a></li>
         <li><a href="./html/cloud.html">cloud..room</a></li>
         <li><a href="./html/cloud.html">cloud..room</a></li>
@@ -26,6 +26,11 @@
     </div>
 
     <div class = 'viewport'>
+      <div class="resize-container">
+        <div id = "win-00" class="resizable">
+           Use right/bottom edge to resize
+        </div>
+      </div>
     </div>
 
   </body>
