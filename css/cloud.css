@@ -12,16 +12,32 @@ html,body{
 }
 
 body {
-  background-color: #006968;
+  background: linear-gradient(315deg, transparent 75%, #197c78 0)-10px 0,
+    linear-gradient(45deg, transparent 75%, #197c78 0)-10px 0,
+    linear-gradient(135deg, #006968 50%, transparent 0) 0 0,
+    linear-gradient(45deg, #0a5350 50%, #084442 0) 0 0 #084442;
+
+  /*background: linear-gradient(315deg, transparent 75%, #d45d55 0)-10px 0,
+  linear-gradient(45deg, transparent 75%, #d45d55 0)-10px 0,
+  linear-gradient(135deg, #a7332b 50%, transparent 0) 0 0,
+  linear-gradient(45deg, #6a201b 50%, #561a16 0) 0 0 #561a16;
+  */
+  background-size: 20px 20px;
 }
 
 nav a{
   position: absolute;
-  display: block;
+  display: inline-block;
+  width: 65px;
   z-index: 3;
   left: 20px;
+  top: 20px;
+
+  background-color: rgba(255, 255, 255, 0.6);
 
   font-size: 5em;
+  line-height: 70px;
+  text-align: center;
 }
 
 nav a:link{
