@@ -1,6 +1,32 @@
+//randomly sets the size of a div on page load
+$(document).ready(function (){
+  initWin($('#win-00'));
+  initWin($('#win-01'));
+});
+
+function startPos($container, childH, childW){
+  //get container dimensions
+  var h = $container.height() - childH - 25;
+  var w = $container.width() - childW - 25;
+
+  var newH = Math.floor(Math.random() * h);
+  var newW = Math.floor(Math.random() * w);
+
+  if(newH < 0){ newH = 25;}
+  if(newW < 0){ newW = 25;}
+
+  return [newH, newW];
+}
+
+function initWin($target){
+  var coord = startPos($target.parent(), $target.height(), $target.width());
+  $target.css({top: coord[0], left: coord[1], visibility: "visible"});
+}
+
 
 //DRAGGABLE SCRIPT
 interact('.draggable')
+  .allowFrom('.drag-handle')
   .draggable({
     inertia: true,
     restrict: {
@@ -8,7 +34,7 @@ interact('.draggable')
       endOnly: true,
       elementRect: {top: 0, left: 0, bottom: 1, right: 1}
     },
-    autoScroll: true,
+    autoScroll: false,
     onmove: dragMoveListener,
   });
 
@@ -35,7 +61,7 @@ window.dragMoveListener = dragMoveListener;
 //RESIZABLE script
 interact('.resizable')
   .resizable({
-    edges: { right: true, bottom: true }
+    edges: { right: '.resize-handle', bottom: '.resize-handle' }
   })
   .on('resizemove', function (event) {
     var target = event.target;
@@ -60,7 +86,7 @@ interact('.resize-drag')
     onmove: window.dragMoveListener
   })
   .resizable({
-    edges: { right: true, bottom: true }
+    edges: { right: '.resize-handle', bottom: '.resize-handle' }
   })
   .on('resizemove', function (event) {
     var target = event.target;
