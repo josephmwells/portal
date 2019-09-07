@@ -70,10 +70,9 @@ nav a:hover{
 
 .pool-side{
   //position: absolute;
-  outline: 30px ridge #cd4a00;
   outline-offset: 0px;
 
-  //mix-blend-mode: color-dodge;
+  mix-blend-mode: color-dodge;
 }
 
 .cloud-pool{
